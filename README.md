@@ -1,6 +1,6 @@
 # Python Based Text Encryptor
 ## Description
-A simple python file to encrypt and decrypt files using a password
+A simple python script to encrypt and decrypt text using a password
 
 ## 🚀 Getting Started
 
@@ -10,7 +10,7 @@ A simple python file to encrypt and decrypt files using a password
 
 ### Encryption
 
-This script takes a message and password in input and after sucessfull encryption its genaretes a ```out.enc``` file whic has the encrypted message its basically a text file with lots of numbers and its hard to decrypt
+This script takes a message and password in input and after sucessfull encryption its genaretes a ```out.enc``` file whic has the encrypted message its basically a text file with lots of numbers and its hard to decrypt by normal people (easy job for nerds)
 
 ### Decryption
 Make sure to put the ```out.enc``` file in same directory as that of script and script has read permission. if you enter the correct password it will show the correct text
