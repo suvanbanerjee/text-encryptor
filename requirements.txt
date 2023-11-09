@@ -1,0 +1,2 @@
+cryptography == 41.0.5
+pyautogui == 0.9.52
