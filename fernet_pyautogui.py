@@ -14,19 +14,18 @@ def decrypt_message(encrypted_message, key):
     f = Fernet(key)
     decrypted_message = f.decrypt(encrypted_message)
     return decrypted_message
-
 def main():
     while True:
-        choice = pyautogui.confirm(text='Choose an option', title='Fernet Encryption', buttons=['Encrypt Message', 'Decrypt Message', 'Exit'])
-        if choice == 'Fernet Encryption':
+        choice = pyautogui.confirm(text='', title='Choose One', buttons=['Encrypt Message', 'Decrypt Message', 'Exit'])
+        if choice == 'Encrypt Message':
             message = pyautogui.prompt(text='Enter message to encrypt: ', title='Encrypt Message', default='')
             message = message.encode()
             key = generate_key()
             encrypted_message = encrypt_message(message, key)
             pyautogui.alert(text='Encrypted Message: ' + str(encrypted_message)[2:-1] + '\nKey: ' + str(key)[2:-1], title='Encrypted Message', button='OK')
         elif choice == 'Decrypt Message':
-            encrypt_message = pyautogui.password(text='Enter message to decrypt: ', title='Decrypt Message', default='', mask='*')
-            encrypted_message = encrypt_message.encode()
+            encrypted_message_input = pyautogui.prompt(text='Enter message to decrypt: ', title='Decrypt Message', default='')
+            encrypted_message = encrypted_message_input.encode()
             key = pyautogui.password(text='Enter key: ', title='Decrypt Message', default='', mask='*')
             key = key.encode()
             decrypted_message = decrypt_message(encrypted_message, key)
@@ -34,7 +33,7 @@ def main():
         elif choice == 'Exit':
             exit()
         else:
-            print("Invalid Choice")
+            pyautogui.alert(text='Provide an valid input', title='Error', button='OK')
 
 if __name__ == "__main__":
     main()
