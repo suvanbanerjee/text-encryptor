@@ -13,9 +13,10 @@ This script takes a message and password in input and after sucessfull encryptio
 Make sure to put the ```out.enc``` file in same directory as that of script and script has read permission. if you enter the correct password it will show the correct text
 
 ## Roadmap
-[]Devlop Basic GUI using Tkinter
-[]Convert to web app using Flask
-[]Deploy Project
+
+[x]Devlop Basic GUI using Pyautogui
+[ ]Convert to web app using Flask
+[ ]Deploy Project
 
 ## 👥 Author
 
