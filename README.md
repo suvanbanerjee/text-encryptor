@@ -14,7 +14,7 @@ pip install -r requirements.txt
 python3 fernet_cli.py
 ```
 ```bash
-python3 fernet_gui.py
+python3 fernet_pyautogui.py
 ```
 
 ## Roadmap
