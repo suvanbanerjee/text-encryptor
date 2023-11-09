@@ -1,12 +1,9 @@
 # Python Based Text Encryptor
 ## Description
-A simple python script to encrypt and decrypt text using a password
-
-## 🚀 Getting Started
-
-⛭ Copy this repo or download main.py file and execute it !!!
+A simple python script to encrypt and decrypt text that uses AES encryption algorithm
 
 ## Usage
+lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 ### Encryption
 
@@ -15,10 +12,9 @@ This script takes a message and password in input and after sucessfull encryptio
 ### Decryption
 Make sure to put the ```out.enc``` file in same directory as that of script and script has read permission. if you enter the correct password it will show the correct text
 
-## Disclamer
- Its not a super secure encryption (TBH, Its plain math)
- <br>[BUG] While decrypting if you enter wrong password it will still give some text insted of wrong password
- <br>This is seriously Slow so dont try to encrypt a full book (Well you can but speed will be awfull!)
+## Roadmap
+[]Devlope Frontend using Flask
+[]Deploy Project
 
 ## 👥 Author
 
