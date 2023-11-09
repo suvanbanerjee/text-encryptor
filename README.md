@@ -14,9 +14,9 @@ Make sure to put the ```out.enc``` file in same directory as that of script and 
 
 ## Roadmap
 
-[x]Devlop Basic GUI using Pyautogui
-[ ]Convert to web app using Flask
-[ ]Deploy Project
+- [x] Devlop Basic GUI using Pyautogui
+- [ ] Convert to web app using Flask
+- [ ] Deploy Project
 
 ## 👥 Author
 
