@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AES Encryptor</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.2.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.2.1/core.js"></script>
+</head>
+<body>
+    <h1>Encryptor</h1>
+    <p>encrypt or decrypt text to AES Standard</p>
+    <input type="text" name="plain_text" id="plain_text" placeholder="Type Plain Text here" />
+    <input type="text" name="pass" id="pass" placeholder="Set a Password" />
+    <button py-click="encrypt">Encrypt</button>
+    <div id="output"></div>
+    <script type="py" src="./main.py" config="./pyscript.json"></script>
+</body>  
+</html>
