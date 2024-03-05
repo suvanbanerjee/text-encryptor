@@ -3,22 +3,25 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>AES Encryptor</title>
+    <title>Text Encryptor</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.2.1/core.css">
     <script type="module" src="https://pyscript.net/releases/2024.2.1/core.js"></script>
 </head>
 <body>
-    <h1>Encryptor</h1>
-    <p>encrypt or decrypt text to AES Standard</p>
-    <input type="text" name="plain_text" id="plain_text" placeholder="Type Plain Text here" />
-    <input type="text" name="pass" id="pass" placeholder="Set a Password" />
-    <button py-click="encrypt">Encrypt</button>
+    <div class="main">
+        <h1>Encrypt / Decrypt Text <span style="color:blue;">(AES)</span></h1>
+        <p>
+            Warning: This is slow so dont use it with large text and passwords.
+        </p>
+        <textarea name="text" id="text" class="input" placeholder="Message"></textarea>
+        <input type="text" name="pass" id="pass" class="input" placeholder="Password" />
+        <div class="buttons">
+        <button class="button" py-click="encrypt">Encrypt</button>
+        <button class="button" py-click="decrypt">Decrypt</button>
+        </div>
     <div id="output"></div>
-    <h1>Decryptor</h1>
-    <input type="text" name="decrypt_text" id="decrypt_text" placeholder="Type Cipher Text here" />
-    <input type="text" name="decrypt_pass" id="decrypt_pass" placeholder="Set a Password" />
-    <button py-click="decrypt">Decrypt</button>
-    <div id="output2"></div>
+    </div>
     <script type="py" src="./main.py" config="./pyscript.json"></script>
 </body>  
 </html>
