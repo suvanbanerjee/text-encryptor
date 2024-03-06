@@ -1,5 +1,6 @@
 import aes_cipher
 from pyscript import document
+import base64
 
 def encrypt(self):
     input_text = document.querySelector("#text")
@@ -18,12 +19,12 @@ def encrypt(self):
         output_div = document.querySelector("#output")
         output_div.innerText = "Message can't be empty"
         return
-    ScryptDefault = aes_cipher.Scrypt(16384, 8, 8)
-    data_encrypter = aes_cipher.DataEncrypter(ScryptDefault)
+    data_encrypter = aes_cipher.DataEncrypter()
     data_encrypter.Encrypt(input_text, key)
     encrypted_message = data_encrypter.GetEncryptedData()
     output_div = document.querySelector("#output")
-    encrypted_message = bytes.hex(encrypted_message)
+    # encrypted_message = bytes.hex(encrypted_message)
+    encrypted_message = base64.b64encode(encrypted_message).decode('utf-8')
     output_div.innerText = "Encrypted Message\n\n" + str(encrypted_message)
 
 def decrypt(self):
@@ -44,9 +45,9 @@ def decrypt(self):
         output_div.innerText = "Message can't be empty"
         return
     try:
-        ScryptDefault = aes_cipher.Scrypt(16384, 8, 8)
-        data_encrypter = aes_cipher.DataDecrypter(ScryptDefault)
-        data_encrypter.Decrypt(bytes.fromhex(input_text), key)
+        data_encrypter = aes_cipher.DataDecrypter()
+        input_text = base64.b64decode(input_text)
+        data_encrypter.Decrypt(input_text, key)
         decrypted_message = data_encrypter.GetDecryptedData()
         output_div = document.querySelector("#output")
         output_div.innerText = "Decrypted Message\n\n" + str(decrypted_message)[2:-1]
