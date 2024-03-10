@@ -2,13 +2,22 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width">
     <title>Text Encryptor</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.2.1/core.css">
     <script type="module" src="https://pyscript.net/releases/2024.2.1/core.js"></script>
+    <script type="module">
+        const loading = document.getElementById('loading');
+        addEventListener('py:ready', () => loading.close());
+        loading.showModal();
+    </script>
 </head>
 <body>
+    <dialog id="loading">
+        <img src="https://memeguy.com/photos/images/when-im-waiting-for-a-gif-to-load-13413.gif" id = "loading_img" />
+        <h2 style="margin: 20px;">Time Please</h2>
+    </dialog>
     <div class="main">
         <h1>Encrypt / Decrypt Text <span style="color:#3d5afe;">(AES)</span></h1>
         <p style="color: rgb(128, 128, 128);"> 

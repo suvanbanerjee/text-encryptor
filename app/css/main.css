@@ -66,3 +66,18 @@ textarea{
     height: 70px;
     font-family: 'Rubik', sans-serif;
 }
+
+#loading{
+    outline: none;
+    border: none;
+    background: #f4f4f4;
+    font-family: 'Rubik', sans-serif;
+    border-radius: 20px;
+    padding: 10px;
+    justify-items: center;
+}
+
+#loading_img{
+    border-radius: 5px;
+    margin: 20px;
+}
