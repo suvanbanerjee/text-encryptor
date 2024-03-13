@@ -1,29 +1,10 @@
 # Text Encryptor
 
 ## Description
-A simple code to encrypt and decrypt text that uses AES encryption algorithm with Fernet symmetric key. The code is written in Python and uses the cryptography library.
+A simple website to encrypt and decrypt text. The code is written in python and uses the cryptography library [pycryp](https://pypi.org/project/pycryp/)
 
-## Usage
 This project is hosted on Vercel. You can access the web app [here](https://aesencryptor.vercel.app).
 
-### Installation
-Install the dependencies
-```bash
-pip install -r requirements.txt
-```
-### Running
-```bash
-python3 fernet_cli.py
-```
-```bash
-python3 fernet_pyautogui.py
-```
-
-## Roadmap
-
-- [x] Devlop Basic GUI
-- [x] Convert to web app
-- [x] Deploy Project [Vercel]
 
 ## 👥 Author
 
